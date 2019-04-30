@@ -1,0 +1,664 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.logo{
+    padding-left: 1px;
+}
+
+
+
+
+
+.navigation{
+    background-color: #b90713;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-content: center;
+}
+
+.icon{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 25%;
+    text-shadow: 5px 5px 2px #0303034d;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.icon:active{
+    box-shadow: none;
+}
+
+
+
+
+
+/*HOME PAGE*/
+.welcome{
+    text-align: center;
+    font-weight: normal;
+}
+
+#card{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.shopping{
+    width: 100%;
+   
+}
+
+tr{
+    line-height: 215%;
+}
+
+th{
+    background-color: #b90713;
+    color: white;
+    border-radius: 2px;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 0.9%;
+    font-size: 80%;
+}
+
+.attributes{
+    width: 13%
+}
+
+#x{
+    background-color: white;
+}
+
+.centernumbers td{
+    text-align: center;
+    font-size: 110%;
+    width: 36px;
+}
+
+#food{
+    text-align: left;
+    width: 196px;
+}
+
+.x{
+    color: #b90713;
+    text-align: center;
+    cursor: pointer;
+}
+
+.centernumbers{
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
+
+#negative{
+    display: none;
+    color: red;
+}
+
+.categories {
+    margin-top: 8%;
+}
+
+.categories button{
+    width: 100%;
+    background-color: #505050;
+    color: white;
+    border-radius: 2px;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 0.9%;
+    font-size: 90%;
+    border: none;
+    padding: 1.5%;
+    margin: 1% 0;
+    display: inline-block;
+}
+
+.buttonplusveg, .buttonplusfru, .buttonplusgra, .buttonplusmea, .buttonplusmil, .buttonplusdri, .buttonplusoth{
+    display: inline-block;
+    float: right;
+}
+
+.prototype{
+    width: 100%;
+}
+
+p{
+    margin: 0;
+}
+
+.htitle{grid-area: htitle;}
+.htable{grid-area: htable;}
+.categories{grid-area: categories;}
+
+.homegrid{
+    padding-bottom: 100px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 4.5% 91% 4.5%;
+    grid-template-areas: 
+    ". htitle ."
+    ". htable ."
+    ". categories ."
+}
+
+
+
+
+
+/*CALCULATE PAGE*/
+#product_select{
+    border: none;
+    margin: 0;
+    font-size: 90%;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 2%;
+    width: 48%;
+    display: inline-block;
+}
+
+#product_select option{
+    background-color: #d5d5d5;
+}
+
+#minus{
+    border: none;
+    margin: 0;
+    font-size: 101%;
+    background-color: #505050;
+    border-radius: 4px;
+    display: inline-block;
+    width: 7%;
+    color: white;
+}
+
+#inputNumber{
+    border: none;
+    background-color: #eee;
+    border-radius: 3.5px;
+    padding: 2px;
+    font-size: 100%;
+    display: inline-block;
+    width: 14%;
+}
+
+#plus{
+    border: none;
+    margin: 0;
+    font-size: 101%;
+    background-color: #505050;
+    border-radius: 4px;
+    display: inline-block;
+    width: 7%;
+    color: white;
+}
+
+#add{
+    border: none;
+    background-color: #eee;
+    border-radius: 3.5px;
+    padding: 2px;
+    box-shadow: 2px 2px 5px #0303034d;
+    font-size: 100%;
+    display: inline-block;
+    width: 16%;
+}
+
+#add:active{
+    box-shadow: none;
+}
+
+.dangermessage{
+    color: #b90713;
+}
+
+#table{
+    width: 100%;
+}
+
+#nocolor{
+    background-color: white;
+}
+
+tr{
+    line-height: 180%;
+    font-size: 90%;
+}
+
+#biggerfont{
+    line-height: 215%;
+    font-size: 90%;
+}
+
+.borderTr td{
+    text-align: left;
+    font-size: 100%;
+}
+
+.sugar, .fat, .fiber{
+    text-align: center;
+    padding: 0 1%;
+}
+
+.borderTr td{
+    text-align: center;
+    border-top: solid 1px #505050;
+}
+
+#borderTrleft{
+    text-align: left;
+    border-top: solid 1px #505050;
+}
+
+.fa-times-circle{
+    color: #b90713;
+}
+
+.ctitle{grid-area: ctitle;}
+.selecting{grid-area: selecting;}
+.table{grid-area: table;}
+
+.calculategrid{
+    padding-bottom: 100px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 4.5% 91% 4.5%;
+    grid-template-areas: 
+    ". ctitle ."
+    ". selecting ."
+    ". table ."
+}
+
+
+
+
+
+/*RECIPES PAGE*/
+.recipes h1{
+    text-align: center;
+    font-weight: normal;
+}
+
+.dailyimg img{
+    width: 100%;
+    display: inline-block;
+    box-shadow: 1px 1px 8px #030303bd;
+    border-radius: 3px;
+}
+
+.dailydesc{
+    width: 85%;
+    padding: 0 9%;
+    display: inline-block;
+}
+
+.dailydesc h3{
+    margin: 0;
+    padding: 0;
+    font-size: 108%;
+}
+
+.dailydesc p{
+    margin: 5% 0 0 0;
+    padding: 0;
+    font-size: 90%;
+}
+
+.buttons{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 8% 0 0 0;
+}
+
+.buttons button{
+    display: inline-block;
+    width: 40%;
+    background-color: #b90713;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    padding: 5%;
+    margin: 5% 4%;
+    font-size: 130%;
+    box-shadow: 5px 5px 5px #030303bd;
+}
+
+.buttons button:active{
+    box-shadow: none;
+}
+
+.rtitle{grid-area: rtitle;}
+.dailyimg{grid-area: dimg;}
+.dailydesc{grid-area: ddesc;}
+.buttons{grid-area: buttons;}
+
+.recipesgrid{
+    padding-bottom: 100px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 4.5% 35.5% 55.5% 4.5%;
+    grid-template-areas: 
+    ". rtitle rtitle ."
+    ". dimg ddesc ."
+    ". buttons buttons ."
+}
+
+
+
+
+
+/*SOUPS PAGE*/
+.soups h1{
+    text-align: center;
+    font-weight: normal;
+}
+
+.filter select{
+    border: none;
+    width: 100%;
+    padding: 2% 0;
+    font-size: 120%;
+    background-color: #eee;
+    color: #505050;
+    border-radius: 5px;
+}
+
+.filter select option{
+    font-size: 65%;
+    background-color: #d5d5d5;
+    width: 100%;
+}
+
+.filter select option:after{
+    font-size: 65%;
+    background-color: red;
+    width: 100%;
+}
+
+.soupboxes{
+    text-align: center;
+}
+
+.soupbox{
+    width: 47%;
+    margin: 5% 0;
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: #b90713;
+    color: white;
+    border-radius: 7px;
+}
+
+#right{
+    margin-right: 2%;
+}
+
+#left{
+    margin-left: 2%;
+}
+
+.soupbox img{
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+    box-shadow: 0.2px 0.2px 5px #030303bd;
+}
+
+.soupbox h3{
+    text-align: center;
+    margin: 0;
+    padding: 6% 0;
+}
+
+.stitle{grid-area: stitle;}
+.filter{grid-area: filter;}
+.soupboxes{grid-area: soupboxes;}
+
+.soupsgrid{
+    padding-bottom: 100px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 4.5% 91% 4.5%;
+    grid-template-areas: 
+    ". goback ."
+    ". stitle."
+    ". filter ."
+    ". soupboxes ."
+}
+
+
+
+
+
+/*SOUP1 PAGE*/
+.goback{
+    padding-top: 6%;
+}
+
+.goback button{
+    width: 30%;
+    padding: 3%;
+    display: inline-block;
+    text-align: center;
+    background-color: #b90713;
+    color: white;
+    border-radius: 15px;
+    font-size: 90%;
+}
+
+#goback{
+    padding-right: 10%;
+}
+
+.s1title h1{
+    text-align: center;
+    font-weight: normal;
+}
+
+.s1img img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.s1nutrional{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+#firstrow{
+    background-color: #b90713;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 3px;
+    font-size: 105%;
+}
+
+#firstrow li{
+    display: inline-block;
+    padding: 4%;
+    width: 20%;
+}
+
+#secondrow{
+    width: 90%;
+    margin: 0 auto;
+    color: #505050;
+    font-size: 90%;
+}
+
+#secondrow li{
+    display: inline-block;
+    padding: 4%;
+    width: 20%;
+}
+
+#s1info{
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10% 0;
+    font-size: 100%;
+}
+
+#s1info i{
+    padding-right: 6%;
+}
+
+.s1infoicon{
+    display: inline-block;
+    width: 20%;
+}
+
+.s1infoicont{
+    display: inline-block;
+    width: 70%;
+}
+
+#infoicon{
+    font-size: 18px;
+}
+
+#ingredients h5{
+    margin: 0;
+    padding: 3% 0;
+    font-size: 120%;
+    font-weight: normal;
+}
+
+#ingredients li{
+    padding: 1% 0;
+}
+
+.steps{
+    padding: 5% 0;
+}
+
+ol{
+    margin: 0;
+    padding: 0 4%;
+    line-height: 180%;
+}
+
+ol li{
+    margin: 0 0 5% 0;
+}
+
+.goback{grid-area: goback;}
+.s1title{grid-area: s1title;}
+.s1img{grid-area: s1img;}
+.s1nutrional{grid-area: s1nutrional;}
+.ingredients{grid-area: ingredients;}
+.steps{grid-area: steps;}
+
+.s1grid{
+    padding-bottom: 100px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 4.5% 45% 46% 4.5%;
+    grid-template-areas: 
+    ". goback goback ."
+    ". s1title s1title ."
+    ". s1img s1nutrional ."
+    ". ingredients ingredients ."
+    ". steps steps ."
+}
+
+
+
+
+
+/*INFO PAGE*/
+.info h1{
+    text-align: center;
+    font-weight: normal;
+}
+
+.information{
+    padding: 0;
+}
+
+.information h3{
+    padding: 0;
+    margin: 0 0 4% 0;
+    color: black;
+}
+
+#arrowdown{
+    padding: 0 0 0 5%;
+}
+
+.information p{
+    padding: 0;
+    margin: 0 0 8% 0;
+}
+
+.tiptrick{
+    padding: 0;
+}
+
+.tiptrick h3{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+.tiptrick p{
+    padding: 0;
+    margin: 2% 0 8% 0;
+}
+
+.tiptrick a{
+    text-decoration: none;
+    color: #b90713;
+}
+
+.ititle{grid-area: ititle;}
+.information{grid-area: information;}
+.tiptrick{grid-area: tiptrick;}
+
+.infogrid{
+    padding-bottom: 100px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 4.5% 91% 4.5%;
+    grid-template-areas: 
+    ". ititle ."
+    ". information ."
+    ". tiptrick ."
+}
+
+
+
+
+
+/*new:
+    1. fixed the recipes
+    2. added grid to the home page
+    
+  comment:
+    1. something is wrong with the navigation. It hides soem part of a page when it's too long. - for example: recipes iPhone 6/7/8 Plus
+    I've tried to fix it but I don't think it's perfect and it still doesn't work on the info page.
+*/

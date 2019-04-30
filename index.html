@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes foreningen</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" href="assets/img/icon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Quicksand" rel="stylesheet"> 
+    <script src="assets/js/script.js"></script>
+
+   <script>
+  
+    
+    </script>
+</head>
+
+<body>
+    <div class="logo"> <img src="assets/img/logo.jpg" onclick="home()"></div>
+    
+    <div class="homepage">
+        <div class="homegrid">
+            <div class="htitle">    
+                <h1 class="welcome">Hi there!</h1>
+                <h3 class="welcome">Your healthier tomorrow starts today</h3><br>
+                <h2 class="welcome" id="card">Your shopping card</h2>
+            </div>
+
+            <div class="htable">
+                <table class="shopping">
+                    
+                    <tr>
+                        <th>Nutrional content per 100 g/ml</th>
+                        <th class="sufar">Sugar</th>
+                        <th class="fat">Fat</th>
+                        <th class="fiber">Fiber</th>
+                        <th id="x"></th>
+                    </tr>
+                        
+                    <tr class="centernumbers">
+                        <td id="food">Apple</td>
+                        <td>10g</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="x"><i class="fas fa-times-circle"></i></td>   
+                    </tr>
+
+                    <tr class="centernumbers">
+                        <td id="food">Banana</td>
+                        <td>23g</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="x"><i class="fas fa-times-circle"></i></td>   
+                    </tr>
+
+                    <tr class="centernumbers">
+                        <td id="food">Cocoa drinks, milk drinks</td>
+                        <td>6g</td>
+                        <td>0.7g</td>
+                        <td>-</td>
+                        <td class="x"><i class="fas fa-times-circle"></i></td>   
+                    </tr>
+
+                    <tr class="centernumbers">
+                        <td id="food">Fish</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="x"><i class="fas fa-times-circle"></i></td>   
+                    </tr>
+
+                    <tr class="centernumbers">
+                        <td id="food">Grevy</td>
+                        <td>-</td>
+                        <td>5g</td>
+                        <td>-</td>
+                        <td class="x"><i class="fas fa-times-circle"></i></td>   
+                    </tr>
+
+                    <tr class="centernumbers" style="display:none;" id="addthis">
+                        <td id="food">Mayonnaise, remoulade</td>
+                        <td>-</td>
+                        <td>10g</td>
+                        <td>-</td>
+                        <td class="x"><i class="fas fa-times-circle" onclick="prototypedel()"></i></td>   
+                    </tr>
+                
+                </table>
+            </div>
+
+            <div class="categories">
+                <button class="catveg" onclick="catveg()">Vegetables<div class="buttonplusveg"><p>+</p></div></button>
+                    
+                <button class="catfru" onclick="catfru()">Fruits<div class="buttonplusfru"><p>+</p></div></button>
+
+                <button class="catgra" onclick="catgra()">Grain (cereal) food<div class="buttonplusgra"><p>+</p></div></button>
+
+                <button class="catmea" onclick="catmea()">Meat<div class="buttonplusmea"><p>+</p></div></button>
+
+                <button class="catmil" onclick="catmil()">Milk products<div class="buttonplusmil"><p>+</p></div></button>
+                    <table id="catmiltab" style="display:none;">                
+                        <tr class="centernumbers" id="catmiltr" style="display:none;">
+                            <td id="food">Mayonnaise, remoulade</td>
+                            <td>-</td>
+                            <td>10g</td>
+                            <td>-</td>
+                            <td class="x"><i class="fas fa-plus-circle" onclick="catmiladd()"></i></td>   
+                        </tr>
+                    </table>
+
+                <button class="catdri" onclick="catdri()">Drinks<div class="buttonplusdri"><p>+</p></div></button>
+
+                <button class="catoth" onclick="catoth()">Others<div class="buttonplusoth"><p>+</p></div></button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="calculate" style="display:none;">
+    <div class="calculategrid">
+        <div class="ctitle">
+            <h1 class="welcome">Calculate your daily intake</h1>
+        </div>  
+    
+        <div class="selecting">
+            <select id="product_select">
+                <option value="" disabled selected>Choose the product</option>
+            </select>
+                
+            <button id="minus" onclick="minus()">-</button>
+            <input type="number" id="inputNumber" min="0" max="1000" value="160"/>
+            <button id="plus" onclick="plus()">+</button>
+                
+            <button onclick="add()" id="add">Add</button>
+            <br>
+                
+            <p id="danger" style="display:none" class="dangermessage">The amount can't be zero or negative!</p>
+            <p id="productDanger" style="display:none" class="dangermessage">Please enter your product</p>
+            <p id="sameProductDanger" style="display:none" class="dangermessage">The product is already on the list!</p>
+            <br>
+        </div>
+
+        <div class="table">           
+            <table  id="table">                 
+                <tbody id="tbody">
+                    <tr id="biggerfont">                 
+                        <th>Product</th> 
+                        <th>Amount</th> 
+                        <th class="sugar">Sugar</th> 
+                        <th class="fat">Fat</th> 
+                        <th class="fiber">Fiber</th> 
+                        <th id="nocolor"> </th> 
+                    </tr>                                  
+                </tbody>
+                
+                <tr class="borderTr">            
+                    <td id="borderTrleft">Amount:</td>
+                    <td></td>
+                    <td id="sumSugar"></td>
+                    <td id="sumFat"></td>
+                    <td id="sumFiber"></td>                 
+                </tr>           
+            </table>
+        </div>  
+    </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    <div class="recipes" style="display:none;">
+        <div class="recipesgrid">
+            <div class="rtitle">
+                <h1>Recipes</h1>
+            </div>
+            <div class="dailyimg">
+               <img src="assets/img/soup2.jpg">
+            </div>
+            <div class="dailydesc">
+                <h3>Curried Butternut Squash Soup</h3>
+                <p>Melt butter in a deep soup pot set to medium heat. Add onions and cook until caramelized, 7-8...</p>
+            </div>            
+            
+            <div class="buttons">
+                <button onclick="soups()">Soups</button>
+                <button>Meat</button>
+                <button>Seafood</button>
+                <button>Pastas</button>
+                <button>Vegetarian</button>
+                <button>Salads</button>
+                <button>Desserts</button>
+                <button>Drinks</button>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+
+
+    <div class="soups" style="display:none;">
+        <div class="soupsgrid">
+            <div class="goback">
+                <button onclick="recipes()"><i class="fas fa-chevron-left" id="goback"></i>
+                Go back</button>
+            </div>
+
+            <div class="stitle">
+                <h1>Soups</h1>
+            </div>
+
+            <div class="filter">
+                <select>
+                    <option value disabled selected>Sort by</option>
+                    <option value="random">Random</option>
+                    <option value="A-Z">A-Z</option>
+                    <option value="Fastest">Fastest</option>
+                    <option value="Easiest">Easiest</option>
+                </select>
+            </div>
+
+            <div class="soupboxes">
+                <div class="soupbox" id="right" onclick="soup1()">
+                    <img src="assets/img/soup1.jpg">
+                    <h3>Yellow Soup</h3>
+                </div>
+                <div class="soupbox" id="left">
+                    <img src="assets/img/soup2.jpg">
+                    <h3>Orange Soup</h3>
+                </div>
+                <div class="soupbox" id="right">
+                    <img src="assets/img/soup3.jpg">
+                    <h3>Brown Soup</h3>
+                </div>
+                <div class="soupbox" id="left">
+                    <img src="assets/img/soup4.jpg">
+                    <h3>Green Soup</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="soup1" style="display:none">
+        <div class="s1grid">
+            <div class="goback">
+                <button onclick="soups()"><i class="fas fa-chevron-left" id="goback"></i>
+                 Go back</button>
+            </div>
+
+            <div class="s1title">
+                <h1>Yellow soup</h1>
+            </div>
+
+            <div class="s1img">
+                    <img src="assets/img/soup1.jpg">            
+            </div>
+            <div class="s1nutrional">
+                <ul id="firstrow">
+                    <li>Sugar</li>
+                    <li>Fat</li>
+                    <li>Fiber</li>
+                </ul>
+                <ul id="secondrow">
+                    <li>8 g</li>
+                    <li>10 g</li>
+                    <li>9 g</li>
+                </ul>
+                <ul id="s1info">
+                    <li> <div class="s1infoicon"><i class="far fa-clock" id="infoicon"></i></div> 
+                         <div class="s1infoicont">8 hours</div> </li>   
+                    <li> <div class="s1infoicon"><i class="fas fa-utensils" id="infoicon"></i></div> 
+                         <div class="s1infoicont">4 port.</div> </li>   
+                    <li> <div class="s1infoicon"><i class="far fa-star" id="infoicon"></i></div>
+                         <div class="s1infoicont">4/5</div> </li>   
+                </ul>
+            </div>
+
+            <div class="ingredients">
+                <ul id="ingredients">
+                    <h5>Ingredients:</h5>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                </ul>
+            </div>
+
+            <div class="steps">
+                <ol>
+                    <li>Combine chicken, onion, bell pepper, garlic, stock, diced tomatoes, tomato sauce, chiles, chili powder, oregano, and cumin in a 4-quart slow cooker. Season with salt and pepper. </li>
+                    <li>Cook, covered, until chicken is cooked through on low 7 to 8 hours or on high 3 to 4 hours. Add squash and green beans and cook, covered, for 30 minutes. Remove chicken, discard bones and shred meat; return to slow cooker. Stir in lime juice and cilantro. </li>
+                    <li>Serve topped with cilantro, jalapeños, and sour cream, with tortilla chips alongside.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="info" style="display:none;">
+        <div class="infogrid">
+            <div class="ititle">
+                <h1>Infromation about type 2 Diabetes</h1>
+            </div>
+
+            <div class="information">
+                <h3 onclick="qone()">What is the difference between type 1 and type 2? 
+                    <i class="fas fa-caret-down" id="arrowdown"></i> 
+                </h3>
+                <div class="qonebox" style="display:none">
+                    <p><b>Type 1 diabetes</b> is usually caused by an auto-immune reaction where the body’s defence system attacks the cells that produce insulin. People with type 1 diabetes produce very little or no insulin. People with this form of diabetes need injections of insulin every day to control the levels of glucose in their blood. <br><br>
+                    <b>Type 2 diabetes</b> accounts for at least 90% of all cases of diabetes. It is characterised by insulin resistance and relative insulin deficiency, either or both of which may be present at the time diabetes is diagnosed. People with type 2 diabetes can often initially manage their condition through exercise and diet.
+                    </p>
+                </div>
+
+                <h3 onclick="qtwo()">What are the symptoms?
+                    <i class="fas fa-caret-down" id="arrowdown"></i> 
+                </h3>
+                <div class="qtwobox" style="display:none">
+                    <p>excessive thirst and hunger<br>
+                        frequent urination<br>
+                        drowsiness or fatigue<br>
+                        dry, itchy skin<br>
+                        blurry vision<br>
+                        slow-healing wounds<br>
+                    </p>
+                </div>                
+
+                <h3 onclick="qthree()">What if I am pregnant?
+                    <i class="fas fa-caret-down" id="arrowdown"></i> 
+                </h3>
+                <div class="qthreebox" style="display:none">
+                    <p>Gestational diabetes (GDM) is a form of diabetes consisting of high blood glucose levels during pregnancy. It develops in one in 25 pregnancies worldwide and is associated with complications to both mother and baby. GDM usually disappears after pregnancy but women with GDM and their children are at an increased risk of developing type 2 diabetes later in life.</p>
+                </div>
+            </div>
+
+            <div class="tiptrick">
+                <h1>Tips and tricks</h1>
+
+                <h3 onclick="tone()">1. Healthy food choices <i class="fas fa-caret-down" id="arrowdown"></i> </h3>
+                <div class="tonebox" style="display:none">
+                    <p>According to the <a href="http://www.diabetes.org/food-and-fitness/food/planning-meals/diabetes-meal-plans-and-a-healthy-diet.html" target="_blank"> American Diabetes Association</a>, start by choosing foods that are low in refined carbohydrates (like sugar and flour) and emphasizing vegetables, whole grains, whole fruit, beans, lean meats (like chicken and fish), and low-fat dairy products. The next part of this strategy is portion control — eat the right amount for a healthy diet and weight control.</p>
+                </div>
+
+                <h3 onclick="ttwo()">2. Eat regularly <i class="fas fa-caret-down" id="arrowdown"></i> </h3>
+                <div class="ttwobox" style="display:none">
+                    <p>Resist eating huge meals once or twice a day. Instead, space your food intake throughout your waking hours by having smaller, more frequent meals and planned snacks at regular intervals, which can help keep your blood sugar on an even keel.</p>
+                </div>
+
+                <h3 onclick="tthree()">3. Exercise regularly <i class="fas fa-caret-down" id="arrowdown"></i> </h3>
+                <div class="tthreebox" style="display:none">
+                    <p>Doctors usually recommend that people do aerobic exercises — those that make the heart work, such as cycling or jogging — but not everyone can, for various reasons. You should discuss this with your doctor to see what type of exercise works best for you.</p>
+                </div>        
+
+                <h3 onclick="tfour()">4. Check your blood glucose <i class="fas fa-caret-down" id="arrowdown"></i> </h3>
+                <div class="tfourbox" style="display:none">
+                    <p>How often you <a href="https://www.everydayhealth.com/type-2-diabetes/symptoms/testing-your-blood-glucose/" target="_blank">check your blood glucose</a> depends on both you and your doctor. Whatever your personalized plan involves, you should maintain that routine. By checking your blood glucose, you can become aware of what affects your levels, and may be able to catch problems before they get out of hand.</p>
+                </div>        
+
+                <h3 onclick="tfive()">5. Take your medication <i class="fas fa-caret-down" id="arrowdown"></i> </h3>
+                <div class="tfivebox" style="display:none">
+                    <p>It may sound like an obvious rule, but some people don’t take their <a href="https://www.everydayhealth.com/type-2-diabetes/guide/treatment/" target="_blank">medication</a> as prescribed. Also be sure to take only those drugs that have been prescribed for you and you alone, and in the doses and frequency prescribed for you.</p>
+                </div>
+
+                <h3 onclick="tsix()">6. Stay informed <i class="fas fa-caret-down" id="arrowdown"></i> </h3>
+                <div class="tsixbox" style="display:none">
+                    <p>While much of the scientific information and the latest research may be hard to understand, try to keep track of any health reports of new or changing treatments for type 2 diabetes. Stay informed, and don’t hesitate to ask your healthcare team if progress you hear about in the news might apply to you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+
+
+
+
+
+    <div class="navigation">
+    
+        <div class="icon"> <i class="fas fa-home" onclick="home()"></i> </div>
+        <div class="icon"> <i class="fas fa-calculator" onclick="calculate()"></i> </div>
+        <div class="icon"> <i class="fas fa-utensils" onclick="recipes()"></i></div>
+        <div class="icon"> <i class="fas fa-info" onclick="info()"></i> </div>
+       
+    </div>
+    
+</body>
+</html>
+
+<!--
+new:
+    1. added some divs to the home page to create grid
+    2. added recipes
+-->
+
